@@ -10,7 +10,7 @@
 	<!-- header -->
 	<header>
 		<div>
-			<h1>Game Name</h1>
+			<h1>You Grow, Girl!</h1>
 		</div>
 		<div>
 			<span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" title="instructions"></span>
@@ -18,174 +18,238 @@
 	</header>
 
 	<!-- start instructions -->
-
-	<div class="instructions col-xs-4 col-xs-offset-4">
-		<p>Welcome to [NAME]! In this game, you'll plant flowers and fight against weeds to grow them strong and beautiful. Each time you solve a number-based puzzle your flower will grow and the weeds will slowly die away. But too many wrong answers will cause your flowers to wither! Before we get started, you'll need to pick a flower. Each flowers starts at a different level of health, making some more challenging to grow than others. Next, you'll choose a weed to fight against and what kind of math you'd like to practice.</p>
-		<button type="button" class="btn center col-xs-12" id="okay">Got it</button>
+	<div class="instructions center col-xs-6 col-xs-offset-3" id="startBox">
+		<p class="startText">You grow, girl!<br><br> In this game, you'll plant flowers and fight against weeds to grow them strong and beautiful. Each time you solve a number-based puzzle your flower will grow and the weeds will slowly die away. But too many wrong answers will cause your flowers to wither!<br><br> Before we get started, you'll need to pick a flower. Each flowers starts at a different level of health, making some more challenging to grow than others. Next, you'll choose a weed to fight against and what kind of math you'd like to practice.</p>
+		<button type="button" class="btn" id="okay">Got it</button>
 	</div>
 
 	<!-- start screen -->
-	<div class="container">
-		<div class="row">
-			<h2 class="col-xs-4">First, choose which flower to grow:</h2>
-		</div>
-		<div class="row">
-			<div class="col-xs-12 col-md-10 col-md-offset1">
-				<ul class="startImages">
-					<li class="col-xs-4">
-						<a href="#"><img src="images/girl2c.png"></a>
-					</li class="col-xs-4">
-					<li>
-						<a href="#"><img src="images/girl3c.png"></a>
-					</li>
-					<li class="col-xs-4">
-						<a href="#"><img src="images/girl4c.png"></a>
-					</li>
-				</ul>
+	<div class="start opacity">
+		<div class="container choices">
+			<div class="row">
+				<h2>First, choose which flower to grow:</h2>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<ul class="startImages flowerImages">
+						<li class="center col-xs-4">
+							<a href="#"><img src="images/girl2c.png" id="daisy"></a>
+						</li>
+						<li class="center col-xs-4">
+							<a href="#"><img src="images/girl4c.png" id="sunflower"></a>
+						</li>
+						<li class="center col-xs-4">
+							<a href="#"><img src="images/girl3c.png" id="tulip"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<ul class="description">
+						<li class="col-xs-4">Daisies are a great start for a garden. Pick this flower to ease into it. </li>
+						<li class="col-xs-4">Sunflowers are good at growing big and tall, this is good place to start.</li>
+						<li class="col-xs-4">Tulips can be tricky sometimes. Pick this flower for a bit of a challenge.</li>
+					</ul>
+				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-xs-12 col-md-10 col-md-offset1">
-				<ul class="description">
-					<li class="col-xs-4">Tulips can be tricky sometimes. Pick this flower for a bit of a challenge.</li>
-					<li class="col-xs-4">Sunflowers are good at growing big and tall, this is good place to start.</li>
-					<li class="col-xs-4">Daisies are a great start for a garden. Pick this flower if you need to take it easy. </li>
-				</ul>
-			</div>
-		</div>
-	</div>
 
-	<div class="container">
-		<div class="row">
-			<h2 class="col-xs-4">Next, choose which kind of weed to battle:</h2>
-		</div>
-		<div class="row">
-			<div class="col-xs-12 col-md-10 col-md-offset-1">
-				<ul class="startImages">
-					<li class="col-xs-4">
-						<a href="#"><img src="images/weed1.png"></a>
-					</li>
-					<li class="col-xs-4">
-						<a href="#"><img src="images/weed2.png"></a>
-					</li>
-					<li class="col-xs-4">
-						<a href="#"><img src="images/weed3.png"></a>
-					</li>
-				</ul>
+		<div class="container choices">
+			<div class="row">
+				<h2>Next, choose which kind of weed to battle:</h2>
 			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-12 col-md-10 col-md-offset1">
-				<ul class="description">
-					<li class="col-xs-4">Level 1: Addition and subtraction</li>
-					<li class="col-xs-4">Level 2: Addition, subtraction, multiplication, and divsion</li>
-					<li class="col-xs-4">Level 3: More numbers with addition, subtraction, multiplication, and division.</li>
-				</ul>
+			<div class="row">
+				<div class="col-xs-12">
+					<ul class="startImages weedImages">
+						<li class="center col-xs-4">
+							<a href="#"><img src="images/weed3.png" id="weed1"></a>
+						</li>
+						<li class="center col-xs-4">
+							<a href="#"><img src="images/weed1.png" id="weed2"></a>
+						</li>
+						<li class="center col-xs-4">
+							<a href="#"><img src="images/weed2.png" id="weed3"></a>
+						</li>
+					</ul>
+				</div>
 			</div>
-		</div>
-		<div class="row">
-			<button type="button" class="btn center col-xs-12" id="start">Let's go!</button>
+			<div class="row">
+				<div class="col-xs-12">
+					<ul class="description">
+						<li class="col-xs-4">Level 1: Addition and subtraction</li>
+						<li class="col-xs-4">Level 2: Addition, subtraction, multiplication, and divsion</li>
+						<li class="col-xs-4">Level 3: Larger numbers with addition, subtraction, multiplication, and division.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="center col-xs-12">
+					<button type="button" class="btn" id="startBtn">Let's go!</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="center col-xs-12">
+					<p class="disable" id="noSelection">Select a flower and weed before you start!</p>
+				</div>
+			</div>
 		</div>
 	</div>
 
 	<!-- Game instructions -->
-	<div class="instructions col-xs-4 col-xs-offset-4">
+	<div class="instructions disable col-xs-4 col-xs-offset-4">
 		<p>Let's get growing! Your goal is to make the set of numbers beneath your flower equal the number to the right. You can do this using any combination of<span id="operator"> addition or subtraction </span>. Each time you're correct, your flower's strength will increase and the weed's strength will decrease. But, if you're not correct or if you're not able to solve the puzzle within 60 seconds, the weed's strength will grow and your flower's strength decreses. Each time your flower's strength increases its ability to grow also increases and it will grow even more next time. Once the flower's strength reaches 100% it will added to your garden. Your garden can hold up to ten plants. </p>
 		<button type="button" class="btn center col-xs-12" id="okay">Ready, set, grow!</button>
 	</div>
 
-	<!-- garden -->
-	<div class="container">
-		<div class="row">
-			<div class="garden center col-xs-10 col-xs-offset-1">
-				<li><img src=""></li>
-				<li><img src=""></li>
-				<li><img src=""></li>
-				<li><img src=""></li>
-				<li><img src=""></li>
-				<li><img src=""></li>
-				<li><img src=""></li>
-				<li><img src=""></li>
-				<li><img src=""></li>
-				<li><img src=""></li>
-			</div>
-		</div>
-	</div>
+	<div class="main disable">
 
-	<!-- Game Play -->
-	<div class="container">
-		<div class="row">
-			<div class="flower col-xs-6">
-				<img src="images/girl2a.png">
-			</div>
-			<div class="weed col-xs-6">
-				<img src="images/weed1.png">
-			</div>
-		</div>
-		<div class="row">
-			<div class="percentage col-xs-6">0%
-				<div class="bar" id="flowerHealth"></div> 100%
-			</div>
-		</div>
-		<div class="row">
-			<div class="percentage col-xs-6">0%
-				<div class="bar" id="weedHealth"></div> 100%
-			</div>
-		</div>
-	</div>
+		<!-- Game Play -->
+		<div class="container center">
 
-	<div class="container">
-		<div class="row">
-			<div class="timer">
-				time
-			</div>
-			<div class="problem col-xs-6">
-				<h3 class="number">num</h3>
-				<div class="operator">
-					<ul>
-					<li class="plus">+</li>
-					<li class="minus">-</li>
-					<li class="multiply">x</li>
-					<li class="divide">&divide</li>
-					</ul>
+			<div class="row playImages">
+				<div class="center col-xs-4">
+					<div class="padding flower">
+						<img src="images/girl2a.png">
+					</div>
+				</div>
+				<div class="center col-xs-4">
+					<div class="padding weed">
+						<img src="images/weed1.png">
+					</div>
+				</div>
+				<div class="col-xs-4">
+					<div class="row">
+						<div class="message center col-xs-12">
+							<h4 id='normal'>Grow your flower by solving the problem. Find the right order of addition, subtraction, multiplication, or division. Hit the grow button when you think you have it!<br><br>You only have:</h4>
+							<h4 class="disable" id="correct">You did it! Your flower grew by <span id="flowerGrowth">num%</span>! Your flower's strength is now <span class="flowerPercent"> num%</span> and the weed's strength is <span class="weedPercent">num%</span>.
+							<br><br>You're doing great, keep it up!</h4>
+							<h4 class="disable" id="incorrect">Oh no! The weed grew instead of your flower. Your flower's strength is now <span class="flowerPercent"></span> and the weed's strength is <span class="weedPercent">num%</span>. <br><br>Don't give up, you can do it!</h4>
+						</div>
+					</div>
+					<div class="row">
+						<div class="timer padding">
+							<h4 id="timeDisplay"><span id="seconds">60</span> seconds</h4>
+							<button type="button" class="disable btn col-xs-12" id="next">Next Problem</button>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="equals col-xs-2">
-				<h3>=</h3>
-				<h3 class="number">num</h3>
-			</div>
-			<button type="button" class="btn col-xs-2" id="submit">Water</button>
-		</div>
-	</div>
 
-	<!-- correct/incorrect -->
-	<div class="instructions col-xs-4 col-xs-offset-4">
-		<p class="correct">You did it! Your flower grew by <span id="flowerGrowth">num%</span>! The weed's strength is now<span class="weedPercent"> num%</span></p>
-		<p class="incorrect">Oh no! The weed grew instead of your flower. Your flower's strength is now<span id="flowerPercent"> num%</span> and the weed's strength is <span class="weedPercent">num%</span></p>
+			<div class="row height">
+				<div class="percentage col-xs-4">0%<span class="floatRight">100%</span>
+					<div class="bar">
+						<div class="tracker" id="flowerHealth"></div>
+					</div>
+				</div>
+				<div class="percentage col-xs-4">0%<span class="floatRight">100%</span>
+					<div class="bar">
+						<div class="tracker" id="weedHealth"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="problem col-xs-12">
+					<h3 class="number col-xs-1"></h3>
+					<div class="operator center col-xs-1">
+						<ul class="col-xs-12">
+							<div class="row">
+								<a href="#"><li class="plus operatorSet1 col-xs-6">+</li></a>
+								<a href="#"><li class="multiply operatorSet1 col-xs-6">*</li></a>
+							</div>
+							<div class="row">
+								<a href="#"><li class="minus operatorSet1 col-xs-6">-</li></a>
+								<a href="#"><li class="divide operatorSet1 col-xs-6">/</li></a>
+							</div>
+						</ul>
+					</div>
+					<h3 class="number col-xs-1"></h3>
+					<div class="operator center col-xs-1">
+						<ul class="col-xs-12">
+							<div class="row">
+								<a href="#"><li class="plus operatorSet2 col-xs-6">+</li></a>
+								<a href="#"><li class="multiply operatorSet2 col-xs-6">*</li></a>
+							</div>
+							<div class="row">
+								<a href="#"><li class="minus operatorSet2 col-xs-6">-</li></a>
+								<a href="#"><li class="divide operatorSet2 col-xs-6">/</li></a>
+							</div>
+						</ul>
+					</div>
+					<h3 class="number col-xs-1"></h3>
+					<div class="operator center col-xs-1">
+						<ul class="col-xs-12">
+							<div class="row">
+								<a href="#"><li class="plus operatorSet3 col-xs-6">+</li></a>
+								<a href="#"><li class="multiply operatorSet3 col-xs-6">*</li></a>
+							</div>
+							<div class="row">
+								<a href="#"><li class="minus operatorSet3 col-xs-6">-</li></a>
+								<a href="#"><li class="divide operatorSet3 col-xs-6">/</li></a>
+							</div>
+						</ul>
+					</div>
+					<h3 class="number col-xs-1"></h3>
+					<div class="operator center col-xs-1">
+						<ul class="col-xs-12">
+							<div class="row">
+								<a href="#"><li class="plus operatorSet4 col-xs-6">+</li></a>
+								<a href="#"><li class="multiply operatorSet4 col-xs-6">*</li></a>
+							</div>
+							<div class="row">
+								<a href="#"><li class="minus operatorSet4 col-xs-6">-</li></a>
+								<a href="#"><li class="divide operatorSet4 col-xs-6">/</li></a>
+							</div>
+						</ul>
+					</div>
+					<h3 class="number col-xs-1"></h3>
+					<h3 class="equal col-xs-1">=</h3>
+					<h3 class="target col-xs-1"></h3>
+					<button type="button" class="btn col-xs-1" id="submit">Grow!</button>
+				</div>
+			</div>
+			<div class="row center col-xs-12">
+				<p class="disable" id="noOperator">Select the operators in the white circles between each letter!</p>
+			</div>
+		</div>
 	</div>
 
 	<!-- win/lose -->
-	<div class="instructions col-xs-4 col-xs-offset-4">
-		<div class="win">
-			<p>Your flower is fully grown! It looks beautiful in your garden. What do you want to do next?</p>
-			<button type="button" class="btn col-xs-6">Grow more flowers</button>
-			<button type="button" class="btn col-xs-6">Fight a different weed</button>
+
+	<div class="win disable instructions col-xs-4 col-xs-offset-4">
+		<p>Your flower is fully grown! It looks beautiful in your garden. What do you want to do next?</p>
+		<div class="row">
+			<button type="button" class="growMore btn largeBtn col-xs-12">Grow more flowers</button>
 		</div>
-		<div class="lose">
-			<p>Yikes! Your flower has been overgrown by weeds. What do you want to do next?</p>
-			<button type="button" class="btn col-xs-6">Grow more flowers</button>
-			<button type="button" class="btn col-xs-6">Fight a different weed</button>
+		<div class="row">
+			<button type="button" class="restart largeBtn btn col-xs-12">Fight a different weed</button>
+		</div>
+	</div>
+	<div class="lose disable instructions col-xs-4 col-xs-offset-4">
+		<p>Yikes! Your flower has been overgrown by weeds. What do you want to do next?</p>
+		<div class="row">
+			<button type="button" class="growMore largeBtn btn col-xs-12">Grow more flowers</button>
+		</div>
+		<div class="row">
+			<button type="button" class="restart largeBtn btn col-xs-12">Fight a different weed</button>
 		</div>
 	</div>
 
+
 	<!-- Full garden -->
-	<div class="instructions col-xs-4 col-xs-offset-4">
+	<!-- <div class="instructions disable col-xs-4 col-xs-offset-4">
 		<p class="fullGarden">You can't fit any more flowers in your garden! What do you want to do?</p>
 		<button type="button" class="btn col-xs-6">Start a new garden</button>
 		<button type="button" class="btn col-xs-6">Fight a different weed</button>
-	</div>
+	</div> -->
+
+	<footer class="col-xs-12">
+		<p class="copyright">&copy 2016 Aly Doerscher</p>
+	</footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
