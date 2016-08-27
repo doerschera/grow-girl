@@ -165,29 +165,34 @@ h2 {
 	margin-top: 20px;
 }
 
-.garden {
-	height: 200px;
-	border: solid 1px #ffffff;
-	margin-top: 100px;
-}
-
 .playImages {
 	margin-top: 150px;
 }
 
 .flower, .weed {
-	border: solid 10px #ffffff;
+	border: solid 5px #ffffff;
 	border-radius: 20px;
 	padding-top: 50px;
+	background-image: url('images/soil.png');
+	background-repeat: repeat-x;
+	background-position: bottom left;
+	background-size: auto 50px;
 	height: 400px;
 }
 
 .flower img {
-	width: 100px;
+	height: 350px;
+	width: auto;
+	position: relative;
+	bottom: 50px;
 }
 
 .weed img {
 	width: 225px;
+	position: absolute;
+	bottom: 3%;
+	left: 20%;
+
 }
 
 .percentage {
@@ -316,6 +321,25 @@ h4 {
 	margin-top: 20px;
 	background-color: #d9d9d9;
 	background-image: none;
+}
+
+.garden {
+	position: absolute;
+	top: 0;
+	left: 25%;
+	height: 100px;
+	padding: 0px 5px;
+	border: none;
+}
+
+.garden li {
+	margin-right: 20px;
+	list-style: none;
+}
+
+.garden img {
+	height: 100px;
+	width: auto;
 }
 
 footer {

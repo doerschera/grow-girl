@@ -4,45 +4,46 @@ $(document).ready(function(){
 	var daisy = {
 		startPercent: 25,
 		growStrength: 5,
-		budSrc: "images/girl2a.png",
-		halfSrc: "images/girl2b.png",
-		bloomSrc: "images/girl2c.png"
+		budSrc: "images/daisyBud.png",
+		halfSrc: "images/daisyHalfBloom.png",
+		bloomSrc: "images/daisyBloom.png"
 	};
 
 	var sunflower = {
 		startPercent: 15,
 		growStrength: 4,
-		budSrc: "images/girl4a.png",
-		halfSrc: "images/girl4b.png",
-		bloomSrc: "images/girl4c.png"
+		budSrc: "images/sunflowerBud.png",
+		halfSrc: "images/sunflowerHalfBloom.png",
+		bloomSrc: "images/sunflowerBloom.png"
 	};
 
 	var tulip = {
 		startPercent: 10,
 		growStrength: 3,
-		budSrc: "images/girl3a.png",
-		halfSrc: "images/girl3b.png",
-		bloomSrc: "images/girl3c.png"
+		budSrc: "images/tulipBud.png",
+		halfSrc: "images/tulipHalfBloom.png",
+		bloomSrc: "images/tulipBloom.png"
 	}
 
 	var weedSrc = {
 		img1: "images/weed3.png",
-		img2: "images/weed2.png",
-		img3: "images/weed1.png"
+		img2: "images/weed1.png",
+		img3: "images/weed2.png"
 	}
 
 	// flower/weed variables
 	var weedPercent = 100;
 	var weedStrength = 5;
 	var weedImg;
+	var weed;
+	var weedSelect = false;
 
 	var flowerImg;
 	var flowerSelect = false;
 	var flower;
 	var flowerStrength = 0;
 	var flowerCurrentPercent = 0;
-	var weed;
-	var weedSelect = false;
+	var gardenCount = 0;
 
 	// start button
 	$('#okay').click(function(){
@@ -143,11 +144,11 @@ $(document).ready(function(){
 	}, 1000)
 
 	// populate math problem
-	var problemNumbers1 = [[1, 2, 3, 4, 5], [6, 2, 8, 9, 1], [7, 3, 4, 2, 1]];
+	var problemNumbers1 = [[3, 9, 7, 1, 3], [3, 7, 2, 1, 1], [3, 4, 2, 6, 2], [5, 8, 3, 1, 4], [4, 1, 7, 8, 2], [3, 4, 3, 7, 4], [7, 2, 2, 3, 5], [6, 1, 5, 3, 1], [2, 4, 7, 1, 3]];
 	var targetNumbers1 = [1, 4, 7];
 	var problemNumbers2 = [[3, 9, 7, 1, 3], [3, 7, 2, 1, 1], [3, 4, 2, 6, 2], [5, 8, 3, 1, 4], [4, 1, 7, 8, 2], [3, 4, 3, 7, 4], [7, 2, 2, 3, 5], [6, 1, 5, 3, 1], [2, 4, 7, 1, 3]];
 	var targetNumbers2 = [1, 3, 8, 14, 4, 12, 9, 7, 3];
-	var problemNumbers3 = [[2, 4, 7, 1, 3], [2, 0, 4, 5, 1], [2, 6, 3, 2, 5]];
+	var problemNumbers3 = [[3, 9, 7, 1, 3], [3, 7, 2, 1, 1], [3, 4, 2, 6, 2], [5, 8, 3, 1, 4], [4, 1, 7, 8, 2], [3, 4, 3, 7, 4], [7, 2, 2, 3, 5], [6, 1, 5, 3, 1], [2, 4, 7, 1, 3]];
 	var targetNumbers3 = [3, 0, 1];
 	var currentTarget;
 	var usedArray=[];
@@ -183,9 +184,9 @@ $(document).ready(function(){
 	}
 
 	function populateNumbers() {
-		console.log(weed);
 		var mathProperty = mathLevel[weed];
 		var numberSet = mathProperty.numbers;
+		console.log(whichArray + 'array');
 
 		for(var i = 0; i < 5; i++) {
 			var num = numberSet[whichArray][i];
@@ -260,8 +261,8 @@ $(document).ready(function(){
 				flowerCurrentPercent -= weedStrength;
 				weedPercent += flowerStrength;
 
-				$('#flowerPercent').html(flowerCurrentPercent+"%");
-				$(".weedPercent").html(weedPercent+"%");
+				messagePercents(flowerCurrentPercent, '.flowerPercent');
+				messagePercents(weedPercent, '.weedPercent');
 				
 				percentConditionals(flowerCurrentPercent, '.flowerPercent');
 				percentConditionals(weedPercent, '.weedPercent');
@@ -320,8 +321,9 @@ $(document).ready(function(){
 				console.log(flowerCurrentPercent + 'percent');
 				weedPercent -= flowerStrength;
 				$('#flowerGrowth').html(flowerStrength +"%");
-				$('.flowerPercent').html(flowerCurrentPercent+"%");
-				$(".weedPercent").html(weedPercent+"%");
+				messagePercents(flowerCurrentPercent, '.flowerPercent');
+				messagePercents(weedPercent, '.weedPercent');
+
 				flowerStrength += flower.growStrength;
 
 				percentConditionals(flowerCurrentPercent, '#flowerPercent');
@@ -333,8 +335,9 @@ $(document).ready(function(){
 
 				flowerCurrentPercent -= weedStrength;
 				weedPercent += flowerStrength;
-				$('.flowerPercent').html(flowerCurrentPercent+"%");
-				$(".weedPercent").html(weedPercent+"%");
+
+				messagePercents(flowerCurrentPercent, '.flowerPercent');
+				messagePercents(weedPercent, '.weedPercent');
 				
 				percentConditionals(flowerCurrentPercent, '#flowerPercent');
 				percentConditionals(weedPercent, '.weedPercent');
@@ -358,6 +361,14 @@ $(document).ready(function(){
 				populateNumbers();
 				targetNumber();
 			});
+		}
+
+		function messagePercents(typePercent, selector) {
+			if(typePercent > 100) {
+				$(selector).html('100%');
+			} else {
+				$(selector).html(typePercent+'%');
+			}
 		}
 
 		function percentConditionals(typePercent, selector) {
@@ -386,10 +397,20 @@ $(document).ready(function(){
 			if(flowerCurrentPercent >= 100) {
 				$('.win').removeClass('disable');
 				$('.main').addClass('opacity');
+				$('.garden img').eq(gardenCount).attr('src', flower.bloomSrc);
+				gardenCount ++;
+				if(gardenCount === 10) {
+					$('.gardenMessage').removeClass('disable');
+					newGarden();
+				}
 			} else if(flowerCurrentPercent <= 0) {
 				$('.lose').removeClass('disable');
 				$('.main').addClass('opacity');
 			}
+		}
+
+		function newGarden() {
+			$('.garden img').attr('src', '#');
 		}
 	}
 
@@ -445,5 +466,6 @@ $(document).ready(function(){
 		$('.plus, .minus, .multiply, .divide').css('backgroundColor', '#ffffff');
 		$('.startImages li').css("border-color", "#ffffff");
 	}
+
 })
 
