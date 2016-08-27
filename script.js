@@ -103,7 +103,7 @@ $(document).ready(function(){
 		weedImg = weedSrc.img3;
 	})
 
-	$('#startBtn').click(function(){
+	$('#startBtn').click(function(event){
 		if(flowerSelect == false || weedSelect == false) {
 			$('#noSelection').removeClass('disable');
 			setTimeout(function(){
@@ -175,6 +175,7 @@ $(document).ready(function(){
 		} else if(usedArray.indexOf(index) === -1) {
 			whichArray = index;
 			usedArray.push(index);
+			console.log(usedArray);
 			return;
 		} else {
 			chooseNumbers();
@@ -190,7 +191,6 @@ $(document).ready(function(){
 			var num = numberSet[whichArray][i];
 			$('.problem').children('.number').eq(i).html(num);
 		}
-		console.log(usedArray);
 	}
 
 	function targetNumber() {
@@ -342,7 +342,10 @@ $(document).ready(function(){
 		}
 
 		function nextProblem(disableId) {
-			$('#next').click(function() {
+			$('#next').off('click');
+			$('#next').click(function(event) {
+				event.preventDefault();
+				event.stopPropagation();
 				$('#timeDisplay').removeClass('disable');
 				$('#next').addClass('disable');
 				$('#normal').removeClass('disable');
