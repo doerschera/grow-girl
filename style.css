@@ -93,6 +93,10 @@ h1 {
 	margin-top: 150px;
 }
 
+#weedChoices {
+		margin-top: 75px;
+	}
+
 h2 {
 	border-bottom: solid 2px #ffffff;
 	padding-bottom: 10px;
@@ -114,19 +118,17 @@ h2 {
 
 .startImages li:nth-child(2) {
 	margin: auto 20px;
-	padding-top: 40px;
 }
 
-.startImages li:nth-child(3) {
-	padding-top: 60px;
-}
-
-.startImages a {
+/*.startImages a {
 	vertical-align: bottom;
-}
+}*/
 
 .startImages img {
 	width: 150px;
+	position: absolute;
+	bottom: 15px;
+	right: 20%;
 }
 
 .description li {
@@ -355,3 +357,111 @@ footer {
 	float: right;
 	padding-right: 20px;
 }
+
+/* Media Queries */
+
+@media (max-width: 1150px) {
+	.garden {
+		left: 20%;
+	}
+}
+
+@media (max-width: 1050px) {
+	.garden img {
+		height: 80px;
+	}
+
+	.garden li {
+		margin-right: 15px;
+	}
+
+	.garden {
+		left: 25%;
+	}
+}
+
+@media (max-width: 982px) {
+	.startImages img {
+		right: 8%;
+	}
+}
+
+@media (max-width: 900px) {
+	.garden img {
+		height: 70px;
+	}
+
+	.garden {
+		top: 10px;
+	}
+}
+
+@media (max-width: 850px) {
+	.startImages img {
+		width: 120px;
+		right: 15%;
+	}
+
+	.flowerImages li {
+		height: 400px;
+	}
+
+	.garden li {
+		margin-right: 10px;
+	}
+
+	.garden {
+		left: 27%;
+	}
+
+}
+
+@media (max-width: 768px) {
+	.startImages img {
+		right: 10%;
+	}
+
+	.garden img {
+		height: 50px;
+	}
+
+	.garden li {
+		margin-right: 5px;
+	}
+
+	.garden {
+		top: 30px;
+		left: 33%;
+	}
+}
+
+@media (max-width: 600px) {
+
+	.startImages img {
+		right: 7%;
+		width: 100px;
+	}
+
+	.flowerImages li {
+		height: 350px;
+	}
+
+	.garden img {
+		height: 70px;
+	}
+
+	.garden {
+		top: 10px;
+		left: 3%;
+	}
+
+	h1 {
+		z-index: 2;
+	}
+}
+
+ @media (max-width: 500px) {
+ 	.startImages img {
+ 		right: 0;
+ 	}
+ }
