@@ -251,16 +251,16 @@ $(document).ready(function(){
 		var num5 = $('.problem').children('.number').eq(4).html();
 		console.log(num2);
 
-		if(operator1 == undefined || 
+		if(operator1 == undefined ||
 		   operator2 == undefined ||
-		   operator3 == undefined || 
+		   operator3 == undefined ||
 		   operator4 == undefined) {
 			if (count == 0) {
 				$('#next').removeClass('disable');
 				$('#normal').addClass('disable');
 				$('#incorrect').removeClass('disable');
 				$('#timeDisplay').addClass('disable');
-						
+
 				nextProblem('#incorrect');
 
 				flowerCurrentPercent -= weedStrength;
@@ -268,7 +268,7 @@ $(document).ready(function(){
 
 				messagePercents(flowerCurrentPercent, '.flowerPercent');
 				messagePercents(weedPercent, '.weedPercent');
-				
+
 				percentConditionals(flowerCurrentPercent, '.flowerPercent');
 				percentConditionals(weedPercent, '.weedPercent');
 
@@ -335,7 +335,7 @@ $(document).ready(function(){
 				percentConditionals(weedPercent, '.weedPercent');
 			} else {
 				$('#incorrect').removeClass('disable');
-				
+
 				nextProblem('#incorrect');
 
 				flowerCurrentPercent -= weedStrength;
@@ -343,7 +343,7 @@ $(document).ready(function(){
 
 				messagePercents(flowerCurrentPercent, '.flowerPercent');
 				messagePercents(weedPercent, '.weedPercent');
-				
+
 				percentConditionals(flowerCurrentPercent, '#flowerPercent');
 				percentConditionals(weedPercent, '.weedPercent');
 			}
@@ -385,7 +385,7 @@ $(document).ready(function(){
 		}
 
 		function trackerConditionals(typePercent, selector, tracker) {
-			if(typePercent >= 3 && typePercent <= 95) {
+			if(typePercent >= 3 && typePercent <= 90) {
 				$(selector).css('left', tracker);
 			}
 		}
@@ -473,4 +473,3 @@ $(document).ready(function(){
 	}
 
 })
-

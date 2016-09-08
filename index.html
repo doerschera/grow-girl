@@ -102,23 +102,40 @@
 		<button type="button" class="btn center col-xs-12" id="okay">Ready, set, grow!</button>
 	</div>
 
-	<div class="main disable">
+	<div class="disable main">
 
 		<!-- Game Play -->
 		<div class="container center">
 
+			<!-- Flower/Weed Images -->
 			<div class="row playImages">
-				<div class="center col-xs-4">
+				<div class="center col-xs-5 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-lg-4">
 					<div class="flower">
 						<img src="images/girl2a.png">
 					</div>
 				</div>
-				<div class="center col-xs-4">
+				<div class="center col-xs-5 col-sm-6 col-lg-4">
 					<div class="weed">
 						<img src="images/weed1.png">
 					</div>
 				</div>
-				<div class="col-xs-4">
+
+				<!-- Health Tracker Small Screens -->
+				<div class="row height" id="smallTracker">
+					<div class="percentage col-xs-5 col-xs-offset-1 col-sm-6" id="percentageOne"><span class="floatLeft">0%</span><span class="floatRight">100%</span>
+						<div class="bar">
+							<div class="tracker" id="flowerHealth"></div>
+						</div>
+					</div>
+					<div class="percentage col-xs-5 col-sm-6"><span class="floatLeft">0%</span><span class="floatRight">100%</span>
+						<div class="bar">
+							<div class="tracker" id="weedHealth"></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Game Messages -->
+				<div class="col-xs- 12 col-lg-4">
 					<div class="row">
 						<div class="message center col-xs-12">
 							<h4 id='normal'>Grow your flower by solving the problem. Find the right order of addition, subtraction, multiplication, or division. Hit the grow button when you think you have it!<br><br>You only have:</h4>
@@ -127,28 +144,32 @@
 							<h4 class="disable" id="incorrect">Oh no! The weed grew instead of your flower. Your flower's strength is now <span class="flowerPercent"></span> and the weed's strength is <span class="weedPercent">num%</span>. <br><br>Don't give up, you can do it!</h4>
 						</div>
 					</div>
+
+					<!-- Timer -->
 					<div class="row">
-						<div class="timer padding">
-							<h4 id="timeDisplay"><span id="seconds">60</span> seconds</h4>
-							<button type="button" class="disable btn col-xs-12" id="next">Next Problem</button>
+						<div class="timer padding col-xs-12">
+							<h4 class="col-xs-10" id="timeDisplay"><span id="seconds">60</span> seconds</h4>
+							<button type="button" class="disable btn col-xs-10" id="next">Next Problem</button>
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<div class="row height">
-				<div class="percentage col-xs-4">0%<span class="floatRight">100%</span>
+			<!-- health tracker large screens -->
+			<div class="row height" id="largeTracker">
+				<div class="percentage col-xs-4"><span class="floatLeft">0%</span><span class="floatRight">100%</span>
 					<div class="bar">
 						<div class="tracker" id="flowerHealth"></div>
 					</div>
 				</div>
-				<div class="percentage col-xs-4">0%<span class="floatRight">100%</span>
+				<div class="percentage col-xs-4"><span class="floatLeft">0%</span><span class="floatRight">100%</span>
 					<div class="bar">
 						<div class="tracker" id="weedHealth"></div>
 					</div>
 				</div>
 			</div>
 
+			<!-- math problem -->
 			<div class="row">
 				<div class="problem col-xs-12">
 					<h3 class="number col-xs-1"></h3>
@@ -206,8 +227,11 @@
 					<h3 class="number col-xs-1"></h3>
 					<h3 class="equal col-xs-1">=</h3>
 					<h3 class="target col-xs-1"></h3>
-					<button type="button" class="btn col-xs-1" id="submit">Grow!</button>
+					<button type="button" class="submitbtn btn col-xs-1" id="submit">Grow!</button>
 				</div>
+			</div>
+			<div class="row col-xs-10 col-xs-offset-1" id="submitSmall">
+				<button type="button" class="submitbtn btn">Grow!</button>
 			</div>
 			<div class="row center col-xs-12">
 				<p class="disable" id="noOperator">Select the operators in the white circles between each letter!</p>
@@ -239,16 +263,16 @@
 	<!-- Garden -->
 	<div class="garden">
 		<ul>
-			<li><img src="images/daisyBloom.png"></li>
-			<li><img src="images/daisyBloom.png"></li>
-			<li><img src="images/daisyBloom.png"></li>
-			<li><img src="images/daisyBloom.png"></li>
-			<li><img src="images/daisyBloom.png"></li>
-			<li><img src="images/daisyBloom.png"></li>
-			<li><img src="images/daisyBloom.png"></li>
-			<li><img src="images/daisyBloom.png"></li>
-			<li><img src="images/daisyBloom.png"></li>
-			<li><img src="images/daisyBloom.png"></li>
+			<li><img></li>
+			<li><img></li>
+			<li><img></li>
+			<li><img></li>
+			<li><img></li>
+			<li><img></li>
+			<li><img></li>
+			<li><img></li>
+			<li><img></li>
+			<li><img></li>
 		</ul>
 	</div>
 
@@ -260,7 +284,7 @@
 		</div>
 		<div class="row">
 			<button type="button" class="restart largeBtn btn col-xs-12">Grow a different flower</button>
-		</div>	
+		</div>
 	</div>
 
 	<footer class="col-xs-12">

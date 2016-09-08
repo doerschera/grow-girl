@@ -120,10 +120,6 @@ h2 {
 	margin: auto 20px;
 }
 
-/*.startImages a {
-	vertical-align: bottom;
-}*/
-
 .startImages img {
 	width: 150px;
 	position: absolute;
@@ -202,6 +198,7 @@ h2 {
 }
 
 .bar {
+	margin-top: 20px;
 	width: 100%;
 	height: 10px;
 	background-color: #0ac247;
@@ -209,6 +206,10 @@ h2 {
 
 .floatRight {
 	float: right;
+}
+
+.floatLeft {
+	float: left;
 }
 
 .padding {
@@ -222,6 +223,10 @@ h2 {
 	background-color: #ffffff;
 	position: absolute;
 	bottom: -2px;
+}
+
+#smallTracker {
+	display: none;
 }
 
 #weedHealth {
@@ -251,7 +256,6 @@ h3 {
 	margin-top: 25px;
 	padding: 0;
 	padding-top: 24px;
-	width: 350px;
 	margin-left: 25px;
 }
 
@@ -260,7 +264,6 @@ h3 {
 	line-height: 60px;
 	padding: auto, 5px;
 	background-color: #ffffff;
-	width: 350px;
 	border-radius: 15px;
 	text-align: center;
 }
@@ -276,7 +279,6 @@ h3 {
 }
 
 h4 {
-	/*font-family: "Lobster";*/
 	font-size: 26px;
 	line-height: 32px;
 	text-align: left;
@@ -305,9 +307,13 @@ h4 {
 	padding: 0;
 }
 
-#submit {
-	margin-top: 20px;
+.submitBtn {
+	margin-top: 14px;
 	font-size: 26px;
+}
+
+#submitSmall {
+	display: none;
 }
 
 .operator a {
@@ -360,6 +366,78 @@ footer {
 
 /* Media Queries */
 
+@media (max-width: 1200px) {
+	h4 {
+		font-size: 22px;
+		line-height: 28px;
+	}
+
+	.playImages {
+		margin-top: 200px;
+	}
+
+	.plus, .minus, .multiply, .divide {
+		width: 38px;
+		height: 38px;
+	}
+
+	#submit {
+		font-size: 22px;
+	}
+
+	h3 {
+		font-size: 75px;
+	}
+
+	.weed img {
+		left: 16%;
+	}
+
+	#timeDisplay {
+		font-size: 45px;
+	}
+
+	.percentage {
+		padding: 0;
+	}
+
+	#smallTracker {
+		display: block;
+		margin-left: 10px;
+	}
+
+	#smallTracker .bar {
+		width: 93%;
+	}
+
+	.floatRight {
+		padding-right: 20px;
+	}
+
+	#weedHealth {
+		left: 90%;
+	}
+
+	#largeTracker {
+		display: none;
+	}
+
+	.message {
+		margin-top: 40px;
+		height: 125px;
+	}
+
+	.timer {
+		margin-top: 0;
+		margin-left: 8.333%;
+	}
+
+	h3 {
+		font-size: 70px;
+	}
+
+}
+
 @media (max-width: 1150px) {
 	.garden {
 		left: 20%;
@@ -380,10 +458,64 @@ footer {
 	}
 }
 
+@media (max-width: 992px) {
+
+	.timer {
+		padding-top: 0;
+		margin-left: 36%;
+		width: 33.333%;
+	}
+
+	#timeDisplay {
+		font-size: 25px;
+	}
+
+	h3 {
+		font-size: 44px;
+		line-height: 44px;
+	}
+
+	.number {
+		padding: 0;
+	}
+
+	#submit {
+		display: none;
+	}
+
+	#submitSmall {
+		display: block;
+	}
+
+	#submitSmall .btn {
+		margin-top: 0;
+	}
+
+	.problem {
+		margin-top: 0;
+		margin-left: 8.333%;
+	}
+
+	.plus, .minus, .multiply, .divide {
+		height: 22px;
+		width: 22px;
+	}
+
+	.operator li {
+		font-size: 18px;
+	}
+}
+
 @media (max-width: 982px) {
 	.startImages img {
 		right: 8%;
 	}
+
+	h4 {
+		font-size: 20px;
+		line-height: 24px;
+	}
+
 }
 
 @media (max-width: 900px) {
@@ -416,7 +548,7 @@ footer {
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	.startImages img {
 		right: 10%;
 	}
@@ -433,6 +565,15 @@ footer {
 		top: 30px;
 		left: 33%;
 	}
+
+	.percentage:first-of-type {
+		margin-left: 8.333%;
+	}
+
+	.problem {
+		margin-left: auto;
+	}
+
 }
 
 @media (max-width: 600px) {
@@ -457,6 +598,14 @@ footer {
 
 	h1 {
 		z-index: 2;
+	}
+
+	#timeDisplay, #next {
+		font-size: 24px;
+	}
+
+	#next {
+		margin-top: 10px;
 	}
 }
 
