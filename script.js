@@ -124,7 +124,7 @@ $(document).ready(function(){
 		$('.flower img').attr("src", flowerImg);
 		$('.weed img').attr("src", weedImg);
 		$('.start').addClass('disable');
-		$('.main').removeClass('disable');
+		$('.main, #toolTip').removeClass('disable');
 		var flowerTracker = flowerCurrentPercent + '%';
 		$('#flowerHealth').css('left', flowerTracker);
 
@@ -472,4 +472,8 @@ $(document).ready(function(){
 		$('.startImages li').css("border-color", "#ffffff");
 	}
 
+})
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
 })
