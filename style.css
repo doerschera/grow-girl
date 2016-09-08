@@ -130,8 +130,9 @@ h2 {
 .startImages img {
 	width: 150px;
 	position: absolute;
-	bottom: 15px;
-	right: 20%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .description li {
@@ -152,18 +153,6 @@ h2 {
 
 .weedImages li {
 	height: 225px;
-}
-
-.weedImages li:nth-child(3) {
-	padding-top: 40px;
-}
-
-.weedImages li:nth-child(2) {
-	padding-top: 60px;
-}
-
-.weedImages li:nth-child(1) {
-	padding-top: 100px;
 }
 
 #noSelection {
@@ -190,16 +179,18 @@ h2 {
 .flower img {
 	height: 350px;
 	width: auto;
-	position: relative;
-	bottom: 50px;
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .weed img {
 	width: 225px;
 	position: absolute;
-	bottom: 3%;
-	left: 20%;
-
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, -10%);
 }
 
 /* Health Tracking */
@@ -409,10 +400,6 @@ footer {
 		font-size: 75px;
 	}
 
-	.weed img {
-		left: 16%;
-	}
-
 	#timeDisplay {
 		font-size: 45px;
 	}
@@ -527,10 +514,6 @@ footer {
 }
 
 @media (max-width: 982px) {
-	.startImages img {
-		right: 8%;
-	}
-
 	h4 {
 		font-size: 20px;
 		line-height: 24px;
@@ -549,10 +532,6 @@ footer {
 }
 
 @media (max-width: 850px) {
-	.startImages img {
-		width: 120px;
-		right: 15%;
-	}
 
 	.flowerImages li {
 		height: 400px;
@@ -569,9 +548,6 @@ footer {
 }
 
 @media (max-width: 767px) {
-	.startImages img {
-		right: 10%;
-	}
 
 	.garden img {
 		height: 50px;
@@ -599,7 +575,6 @@ footer {
 @media (max-width: 600px) {
 
 	.startImages img {
-		right: 7%;
 		width: 100px;
 	}
 
@@ -628,9 +603,3 @@ footer {
 		margin-top: 10px;
 	}
 }
-
- @media (max-width: 500px) {
- 	.startImages img {
- 		right: 0;
- 	}
- }
