@@ -50,6 +50,12 @@ header {
 	background-position: left bottom;
 }
 
+/* Mobile Portrait*/
+
+.portrait {
+	display: none;
+}
+
 /* Intro */
 
 .instructions {
@@ -375,7 +381,37 @@ footer {
 	padding-right: 20px;
 }
 
-/* Media Queries */
+/* Mobile Media Queries */
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+		.portrait {
+			display: block;
+			width: 100%;
+			height: 100vh;
+			background-color: rgba(179, 179, 179, 0.5);
+			position: absolute;
+		}
+
+		h4 {
+			margin-top: 30vh;
+			padding: 0 25px;
+			font-family: "Raleway", "Helvetica Neue", Helvetica, sans-serif;
+			font-size: 20px;
+			color: #ffffff;
+		}
+
+		.instructions, .start, footer {
+			display: none;
+		}
+
+	}
+
+/* Web Media Queries */
 
 @media (max-width: 1200px) {
 	h4 {
