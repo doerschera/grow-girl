@@ -1,5 +1,7 @@
 @import 'https://fonts.googleapis.com/css?family=Lobster|Raleway:100,200,300';
 
+
+/* general */
 body {
 	font-family: "Raleway", Helvetica, sans-serif;
 	font-weight: 100;
@@ -48,6 +50,8 @@ header {
 	background-position: left bottom;
 }
 
+/* Intro */
+
 .instructions {
 	position: absolute;
 	z-index: 10;
@@ -73,9 +77,10 @@ header {
 	background-image: none;
 }
 
+/* Header Content */
+
 h1 {
 	font-family: "Lobster", Helvetica, sans-serif;
-	/*padding-top: 20px;*/
 	padding-left: 20px;
 	line-height: 100px;
 	margin-top: 0;
@@ -88,6 +93,8 @@ h1 {
 	margin-top: 40px;
 	margin-right: 20px;
 }
+
+/* Flower/Weed Selection */
 
 .choices {
 	margin-top: 150px;
@@ -163,6 +170,8 @@ h2 {
 	margin-top: 20px;
 }
 
+/* Game Images */
+
 .playImages {
 	margin-top: 150px;
 }
@@ -192,6 +201,8 @@ h2 {
 	left: 20%;
 
 }
+
+/* Health Tracking */
 
 .percentage {
 	margin: 0;
@@ -237,19 +248,7 @@ h2 {
 	left: 25%;
 }
 
-.problem {
-	margin-top: 50px;
-}
-
-h3 {
-	display: inline-block;
-	height: 90px;
-	line-height: 90px;
-	margin: 0;
-	font-family: "Lobster";
-	font-size: 80px;
-	padding: 0;
-}
+/* Message and Timer Display */
 
 .timer {
 	height: 125px;
@@ -287,6 +286,21 @@ h4 {
 	margin: 0;
 }
 
+/* Math Problem */
+
+.problem {
+	margin-top: 50px;
+}
+
+h3 {
+	display: inline-block;
+	height: 90px;
+	line-height: 90px;
+	margin: 0;
+	font-family: "Lobster";
+	font-size: 80px;
+	padding: 0;
+}
 
 .plus, .minus, .multiply, .divide {
 	background-color: #ffffff;
@@ -321,6 +335,8 @@ h4 {
 	text-decoration: none;
 }
 
+/* Win/Lose Message */
+
 .win, .lose {
 	top: 25%;
 }
@@ -330,6 +346,8 @@ h4 {
 	background-color: #d9d9d9;
 	background-image: none;
 }
+
+/* Garden Images &  Message */
 
 .garden {
 	position: absolute;
@@ -349,6 +367,8 @@ h4 {
 	height: 100px;
 	width: auto;
 }
+
+/* Footer */
 
 footer {
 	margin-top: 50px;
