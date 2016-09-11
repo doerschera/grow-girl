@@ -126,7 +126,7 @@ $(document).ready(function(){
 		$('.start').addClass('disable');
 		$('.main, #toolTip').removeClass('disable');
 		var flowerTracker = flowerCurrentPercent + '%';
-		$('#flowerHealth').css('left', flowerTracker);
+		$('.flowerHealth').css('left', flowerTracker);
 
 		chooseNumbers();
 		populateNumbers();
@@ -308,8 +308,8 @@ $(document).ready(function(){
 			var weedTracker = weedPercent + "%";
 			var flowerTracker = flowerCurrentPercent + "%";
 
-			trackerConditionals(weedPercent, '#weedHealth', weedTracker);
-			trackerConditionals(flowerCurrentPercent, '#flowerHealth', flowerTracker);
+			trackerConditionals(weedPercent, '.weedHealth', weedTracker);
+			trackerConditionals(flowerCurrentPercent, '.flowerHealth', flowerTracker);
 
 			winLose();
 			flowerImages();
@@ -441,8 +441,8 @@ $(document).ready(function(){
 		$('.plus, .minus, .multiply, .divide').css('backgroundColor', '#ffffff');
 
 		var flowerTracker = flowerCurrentPercent + "%";
-		$('#flowerHealth').css("left", flowerTracker);
-		$('#weedHealth').css('left', '95%');
+		$('.flowerHealth').css("left", flowerTracker);
+		$('.weedHealth').css('left', '95%');
 
 		chooseNumbers();
 		populateNumbers();

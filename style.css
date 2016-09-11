@@ -242,13 +242,10 @@ h2 {
 	display: none;
 }
 
-#weedHealth {
+.weedHealth {
 	left: 95%;
 }
 
-#flowerHealth {
-	left: 25%;
-}
 
 /* Message and Timer Display */
 
@@ -388,7 +385,7 @@ footer {
 
 /* Mobile Media Queries */
 
-@media only screen
+/*@media only screen
   and (min-device-width: 320px)
   and (max-device-width: 736px)
   and (-webkit-min-device-pixel-ratio: 2)
@@ -462,9 +459,9 @@ footer {
 		padding-right: 20px;
 	}
 
-	/*#weedHealth {
+	#weedHealth {
 		left: 90%;
-	}*/
+	}
 
 	#largeTracker {
 		display: none;
