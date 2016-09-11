@@ -385,7 +385,7 @@ $(document).ready(function(){
 		}
 
 		function trackerConditionals(typePercent, selector, tracker) {
-			if(typePercent >= 3 && typePercent <= 90) {
+			if(typePercent >= 3 && typePercent <= 95) {
 				$(selector).css('left', tracker);
 			}
 		}
