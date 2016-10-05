@@ -6,7 +6,7 @@
 
 ###Technology
 
--jQuery time intervals
+- jQuery time intervals
 - Bootstrap
 - HTML/CSS
 - Illustration using Photoshop & Illustrator
