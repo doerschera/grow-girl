@@ -13,7 +13,7 @@
 
 ###Process
 
-The inspiration for *You Grow Girl!* stemmed from the girl-flower illustrations, which were based on the whimsical sunae (Japanese sand painting) work of the artist [Naoshi](http://www.nao-shi.com/English/Gallery/gallery/gallery11/gallery11.html). I wanted to create a game that was silly and inviting while as being encouraging and challenging. 
+The inspiration for *You Grow Girl!* stemmed from the girl-flower illustrations, which were based on the whimsical sunae (Japanese sand painting) work of the artist [Naoshi](http://www.nao-shi.com/English/Gallery/gallery/gallery11/gallery11.html). I wanted to create a game that was silly and inviting while also being encouraging and challenging. 
 
 Users can choose from three different flowers and weeds, which represent different levels of study. The three flowers-- tulip, daisy, and sunflower-- are ranked on their difficulty to grow and have different starting health percentages. Tulips, the hardest to grow, start at 10% and have an initial growth rate of 3%. Daisies, the easiest to grow, start at 25% and have a growth rate of 5%. The three weeds correspond to different math levels: addition and subtraction only; addition, subtraction, multiplication, and division; and addition, subtraction, multiplication, and division with larger numbers.
 
