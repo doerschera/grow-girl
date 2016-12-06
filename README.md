@@ -1,4 +1,4 @@
-# [You Grow Girl!](https://pacific-reaches-45218.herokuapp.com/)
+# [You Grow Girl!](https://yourgrowgirl.herokuapp.com/)
 
 ###Background
 
