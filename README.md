@@ -1,4 +1,4 @@
-# [You Grow Girl!](https://yourgrowgirl.herokuapp.com/)
+# [You Grow Girl!](https://yougrowgirl.herokuapp.com/)
 
 ###Background
 
